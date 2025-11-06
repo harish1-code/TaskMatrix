@@ -26,7 +26,7 @@ app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 app.secret_key = os.environ.get('FLASK_SECRET', 'change_this_secret')
 
-GEMINI_API_KEY = "AIzaSyB-h2vHMybgGsLo9ewsBqf8WH5L9fDszLo"
+GEMINI_API_KEY = ""
 
 genai.configure(api_key=GEMINI_API_KEY)
 
@@ -161,7 +161,7 @@ def get_daily_quote():
     if row:
         quote, author = row
     else:
-        API_KEY = "mK2EIaIL5JtFIdnqz6RwwA==c2RbFiMT5P4fX2lS"
+        API_KEY = ""
         headers = {'X-Api-Key': API_KEY}
 
         try:
